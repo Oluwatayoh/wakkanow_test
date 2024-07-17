@@ -1,0 +1,84 @@
+{
+  "roles": [
+    {
+      "id": "1",
+      "roleName": "SuperAdmin"
+    },
+    {
+      "id": "2",
+      "roleName": "Admin"
+    },
+    {
+      "id": "3",
+      "roleName": "User"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "password": "admin",
+      "status": "active",
+      "roleId": "1",
+      "firstname": "Admin",
+      "lastname": "Super User ",
+      "firstLogin": true,
+      "loginToken": "hjfdsbfk747374hhsjjhhs"
+    },
+    {
+      "id": "2",
+      "username": "user1",
+      "password": "password1",
+      "status": "inactive",
+      "roleId": "0",
+      "firstname": "John",
+      "lastname": "Doe",
+      "firstLogin": false,
+      "loginToken": ""
+    },
+    {
+      "id": "3",
+      "username": "user2",
+      "password": "password2",
+      "status": "inactive",
+      "roleId": "0",
+      "firstname": "Jane",
+      "lastname": "Smith",
+      "firstLogin": false,
+      "loginToken": ""
+    },
+    {
+      "id": "6391",
+      "username": "ojotayoh",
+      "password": "1111",
+      "firstname": "Oluwatayo",
+      "lastname": "Ojo",
+      "status": "inactive",
+      "roleId": "0",
+      "firstLogin": false,
+      "loginToken": ""
+    },
+    {
+      "id": "686",
+      "username": "ag",
+      "password": "1111",
+      "firstname": "Olalekan",
+      "lastname": "Agboola",
+      "status": "inactive",
+      "roleId": "0",
+      "firstLogin": false,
+      "loginToken": ""
+    },
+    {
+      "id": "1112",
+      "username": "falu",
+      "password": "1111",
+      "firstname": "Fasasi",
+      "lastname": "Fulu Akins",
+      "status": "active",
+      "roleId": "2",
+      "firstLogin": true,
+      "loginToken": "bkiHKTgbBT1ovfmV"
+    }
+  ]
+}

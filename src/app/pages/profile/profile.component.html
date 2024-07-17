@@ -1,0 +1,135 @@
+<app-app-bar></app-app-bar>
+<!-- <div *ngIf="user">
+    <h2>User Profile</h2>
+    <p>ID: {{ user.id }}</p>
+    <p>Username: {{ user.username }}</p>
+    <p>First Name: {{ user.firstname }}</p>
+    <p>Last Name: {{ user.lastname }}</p>
+    <p>Status: {{ user.status }}</p>
+    <p *ngIf="user.roleName">Role: {{ user.roleName }}</p>
+  
+    <div *ngIf="user.status === 'inactive'">
+      <label for="role">Select Role:</label>
+      <select id="role" [(ngModel)]="selectedRoleId">
+        <option *ngFor="let role of roles" [value]="role.id">{{ role.roleName }}</option>
+      </select>
+      <button (click)="updateUser()">Update</button>
+    </div>
+  </div> -->
+
+<br />
+<br>
+<br>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xl-4 order-xl-2 mb-5 mb-xl-0">
+            <div class="card card-profile shadow">
+                <div class="row justify-content-center">
+                    <div class="col-lg-3 order-lg-2">
+                        <div class="card-profile-image">
+                            <a href="#">
+                                <img src="https://demos.creative-tim.com/argon-dashboard/assets-old/img/theme/team-4.jpg"
+                                    class="rounded-circle">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-body pt-0 pt-md-4">
+
+                    <div class="text-center">
+                        <br>
+                        <br><br>
+                        <br>
+                        <br>
+                        <h3>
+                            {{user?.firstname}} {{user?.lastname}}
+                        </h3>
+                        <div class="h5 font-weight-300">
+                            {{user?.roleName}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-8 order-xl-1">
+            <div class="card bg-secondary shadow">
+                <div class="card-header bg-white border-0">
+                    <div class="row align-items-center">
+                        <div class="col-8">
+                            <h3 class="mb-0">Profile Information</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="pl-lg-4">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group focused">
+                                        <label class="form-control-label" for="username">Username</label>
+                                        <input id="username" [(ngModel)]="user!.username" name="username"
+                                            [disabled]="authService.isUserAdmin()"
+                                            class="form-control form-control-alternative" placeholder="Username">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group focused">
+                                        <label class="form-control-label" for="password">Password</label>
+                                        <input type="password" id="password" [(ngModel)]="user!.password"
+                                            name="password" [disabled]="authService.isUserAdmin()"
+                                            class="form-control form-control-alternative">
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="firstname">First Name</label>
+                                        <input id="firstname" [(ngModel)]="user!.firstname" name="firstname"
+                                            class="form-control form-control-alternative">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group focused">
+                                        <label class="form-control-label" for="lastname">Last Name</label>
+                                        <input type="text" id="lastname" [(ngModel)]="user!.lastname" name="lastname"
+                                            class="form-control form-control-alternative">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group focused">
+                                        <label class="form-control-label" for="status">Status</label>
+                                        <input type="text" id="status" [(ngModel)]="user!.status" name="status" disabled
+                                            class="form-control form-control-alternative">
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="form-group focused">
+                                        <label class="form-control-label" for="role">Select Role</label>
+
+                                        <select id="role" id="role" name="role" [disabled]="user?.status === 'active'"
+                                            class="form-control form-control-alternative" [(ngModel)]="selectedRoleId">
+                                            <option *ngFor="let role of roles" [value]="role.id">{{ role.roleName }}
+                                            </option>
+                                        </select>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="col-4" (click)="updateUser()">
+                                    <a class="btn btn-sm btn-primary">Update</a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

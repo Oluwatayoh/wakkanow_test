@@ -1,0 +1,24 @@
+<div class="login_container">
+    <div class="wrapper">
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <h1>Signup</h1>
+            <div class="input-box">
+                <input id="firstname" placeholder="First Name" formControlName="firstname" type="text" />
+            </div>
+            <div class="input-box">
+                <input id="lastname" placeholder="Last Name" formControlName="lastname" type="text" />
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="Username" formControlName="username" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Password" formControlName="password" required>
+                <!-- <fa-icon [icon]="eye" class="bx bxs-user"></fa-icon> -->
+            </div>
+
+            <button type="submit" class="btn" type="submit">Signup</button>
+
+        </form>
+    </div>
+</div>

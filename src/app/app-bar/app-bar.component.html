@@ -1,0 +1,11 @@
+<header class="app-bar">
+    <div class="title">
+        <h2 class="title">User Management System</h2>
+    </div>
+    <div class="user-info col-md-2">
+        <h4 class="title"> <span class="">{{ authService.getCurrentUser().firstname }} {{ authService.getCurrentUser().lastname
+                }}</span>
+        </h4>
+        <fa-icon [icon]="logOutIcon" class="bx title" (click)="authService.logout()">Log-Out</fa-icon>
+    </div>
+</header>

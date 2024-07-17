@@ -1,0 +1,14 @@
+.app-bar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.user-info{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
